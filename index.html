@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-4">
+        <h1>HISTÓRICO DE PEDIDOS</h1>
+        
+    </header>
+    <div class="container mt-4">
+        <div class="cadastro_cliente mb-4 p-3 bg-white rounded shadow-sm">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="nome_cliente" class="form-control mb-2" placeholder="Nome do cliente">
+                </div>
+                <div class="col">
+                    <input type="text" id="telefone_cliente" class="form-control mb-2" placeholder="Telefone do cliente">
+                </div>
+            </div>
+        </div>
+        <div class="box_produto mb-4 p-3 bg-white rounded shadow-sm">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="servico" class="form-control mb-2" placeholder="Serviço">
+                </div>
+                <div class="col">
+                    <input type="number" id="valor_item" class="form-control mb-2" placeholder="Valor do item">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <input type="number" id="quantos_itens" class="form-control mb-2" placeholder="Quantos itens">
+                </div>
+                <div class="col">
+                    <select name="forma_de_pagamento" id="forma_de_pagamento" class="form-control mb-2" aria-placeholder="forma de pagamento">
+                        <option value="pix">Pix</option>
+                        <option value="debito">Débito</option>
+                        <option value="credito">Crédito</option>
+                        <option value="dinheiro">Dinheiro</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <input type="number" id="valor_cliente" class="form-control mb-2" placeholder="Valor pago">
+                </div>
+                <div class="col">
+                    <input type="date" id="data" class="form-control mb-2">
+                </div>
+            </div>
+        </div>
+        <div class="text-center mb-4">
+            <button id="enviar" class="btn btn-primary mr-2">Enviar</button>
+            <button id="imprimir" class="btn btn-secondary">Imprimir</button>
+        </div>
+        <div class="box_historico_dados p-4 bg-white rounded shadow-sm">
+            <div class="historico">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nome do Cliente</th>
+                            <th>Telefone</th>
+                            <th>Serviço</th>
+                            <th>Valor do Item</th>
+                            <th>Quantidade</th>
+                            <th>Forma de Pagamento</th>
+                            <th>Valor Pago</th>
+                            <th>Data</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <div id="total_valor"></div>
+                    <div id="diferenca_valor"></div>
+
+                    <tbody id="historico_corpo" class="historico_corpo">
+                        <!-- Dados do histórico serão inseridos aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="text-center mb-4">
+            <input type="date" id="data_filtro" class="form-control mb-2" placeholder="Filtrar por data">
+            <button id="pesquisar" class="btn btn-info">Pesquisar</button>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js.js"></script>
+</body>
+</html>
